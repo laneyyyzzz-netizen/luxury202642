@@ -11,46 +11,46 @@ interface BrandConfig {
   percentages: { label: string; value: number }[];
 }
 
-// --- 2. 结果配置 ---
+// --- 2. 结果配置 (已修正路径) ---
 const BRAND_MAP: Record<BrandKey, BrandConfig> = {
   minimal: {
     name: "C*LINE",
     title: "极简主义 | 冷静的执剑者",
-    image: "/vibe-01.webp",
+    image: "./vibe-01.webp",
     desc: "在你的美学词典里，‘克制’是最高级的赞美。你迷恋留白与秩序，在嘈杂的世界中始终保持绝对的掌控感。你追求的不是引人注目，而是当人走远后，那种余味悠长的松弛与从容。",
     percentages: [{ label: "极简主义", value: 85 }, { label: "静奢内敛", value: 15 }]
   },
   avantGarde: {
     name: "BALENCI*GA",
     title: "先锋美学 | 审美的破局者",
-    image: "/vibe-02.webp",
+    image: "./vibe-02.webp",
     desc: "规则对你而言只是参考。你热衷于挑战传统的视觉边界，将前卫与实用完美糅合。在你的世界里，时尚是一场关于勇气的自我表达，不被定义才是你最鲜明的标签。",
     percentages: [{ label: "先锋廊形", value: 70 }, { label: "极简主义", value: 30 }]
   },
   opulent: {
     name: "VERS*CE",
     title: "华丽美学 | 视觉的统治者",
-    image: "/vibe-03.webp",
+    image: "./vibe-03.webp",
     desc: "繁复即是生命力。你从不掩饰对极致感官享受的追求，华丽的纹饰与浓郁的色彩是你的盔甲。你出现在哪里，哪里就是视觉的中心，这种生命张力本身就是一种统治力。",
     percentages: [{ label: "华丽美学", value: 80 }, { label: "匠心经典", value: 20 }]
   },
   classic: {
     name: "CHAN*L / HERM*S",
     title: "匠心经典 | 底蕴的守护者",
-    image: "/vibe-04.webp",
+    image: "./vibe-04.webp",
     desc: "测出这个结果的你，骨子里有一种‘不讨好’的清冷。你钟情于经典的廓形，是因为你追求的是一种绝对的自我秩序。对你来说，真正的奢侈不是昂贵的价格，而是那种十年如一日、跨越时代的质感与定力。",
     percentages: [{ label: "匠心经典", value: 65 }, { label: "静奢内敛", value: 35 }]
   },
   lowKey: {
     name: "C*LINE / Loro Piana",
     title: "静奢格调 | 隐秘的掌权者",
-    image: "/vibe-05.webp",
+    image: "./vibe-05.webp",
     desc: "真正的奢侈是无需言说的。顶级质感是你的唯一底气，你不需要 Logo 来证明身价。这种‘大音希声’的穿衣逻辑，折射出你极其强大的内核与不战而屈人之兵的优雅。",
     percentages: [{ label: "静奢内敛", value: 90 }, { label: "极简主义", value: 10 }]
   }
 };
 
-// --- 3. 20道全量题目配置 ---
+// --- 3. 20道题目配置 ---
 const QUESTIONS = [
   { title: "1. 玩手机时，你最常...", options: [{ label: "刷理财/新闻", scores: { classic: 3 } }, { label: "看潮流/街拍", scores: { avantGarde: 3 } }, { label: "清理桌面/收纳", scores: { minimal: 3 } }, { label: "刷派对/度假vlog", scores: { opulent: 3 } }] },
   { title: "2. 你更偏爱的家居色调是？", options: [{ label: "水泥灰/冷白", scores: { minimal: 3 } }, { label: "黑金/浓郁丝绒", scores: { opulent: 3 } }, { label: "大地色/米色系", scores: { lowKey: 3 } }, { label: "胡桃木/中古感", scores: { classic: 3 } }] },
